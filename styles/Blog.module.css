@@ -1,0 +1,44 @@
+.blogContainer{
+
+}
+.blog{
+    padding: 2em 4%;
+}
+.blogHeading{
+font-weight: bold;
+font-size: 2.8rem;
+/* width: 100%; */
+max-width: 90%;
+margin-bottom: 12px;
+}
+.blogHeading::selection{
+    background-color: blue;
+    color: white;
+}
+.date{
+color: gray;
+font-size: 1.6rem;
+font-weight: 600;
+margin-bottom: 12px;
+}
+
+.author{
+font-size: 2rem;
+font-weight: bold;
+}
+.author>span{
+    font-weight: 600;
+    margin-left: 7px;
+}
+
+.blogContent{
+margin-top: 12px;
+font-weight: 600;
+font-size: 2rem;
+line-height: 1.8;
+}
+
+.blogContent::selection{
+    background-color: blue;
+    color: white;
+}
