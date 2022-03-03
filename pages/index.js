@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import { auth, db } from "../Firebase/config";
 import { getDocs, deleteDoc, doc } from "firebase/firestore";
 import { useContext } from "react";
@@ -77,6 +77,7 @@ export default function Home() {
           </div>
         )}
       </div>
+      
       <main className={styles.main}>
         <div className={styles.mainContainer}>
           {blogData &&
