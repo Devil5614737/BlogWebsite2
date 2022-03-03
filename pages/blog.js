@@ -1,18 +1,19 @@
 import React, { useContext } from 'react';
 import Context from '../context/Context';
 import styles from '../styles/Blog.module.css';
-
+import {motion} from 'framer-motion'
 
 function blog() {
 
   const{blog}=useContext(Context)
 
 
-
   return (
 <main className={styles.blogContainer}
 >
-<div className={styles.blog}>
+<motion.div initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: .2 }} className={styles.blog}>
     <h2 className={styles.blogHeading}>
     {blog&&blog.title}
     </h2>
@@ -25,7 +26,7 @@ function blog() {
     <p className={styles.blogContent}>
     {blog&&blog.content}
     </p>
-</div>
+</motion.div>
 
 
 

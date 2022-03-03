@@ -31,6 +31,7 @@ const handleLogout=()=>{
   localStorage.removeItem('token')
 }
 
+const ISSERVER = typeof window === "undefined";
 
 
 return(
@@ -42,7 +43,7 @@ return(
                 <div className={styles.loginContainer}>
           
                 <p className={styles.loginLink}>{user&&user.email}</p>
-                {localStorage.getItem('token')?  <p className={styles.loginLink} onClick={handleLogout} >Logout</p>:  <p className={styles.loginLink} onClick={useAuth} >Login</p>}
+                {!ISSERVER&& localStorage.getItem('token')?<p className={styles.loginLink} onClick={handleLogout} >Logout</p>:  <p className={styles.loginLink} onClick={useAuth} >Login</p>}
               
 
                 </div>
