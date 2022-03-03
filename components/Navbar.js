@@ -37,7 +37,7 @@ const ISSERVER = typeof window === "undefined";
 return(
         <div className={styles.navbar}>
             <div className={styles.navbarContainer}>
-                <Link href="/" passHref={false}>
+                <Link href="/" passHref={true}>
                   <p className={styles.logo}>Blogify.com</p>
                 </Link>
                 <div className={styles.loginContainer}>
